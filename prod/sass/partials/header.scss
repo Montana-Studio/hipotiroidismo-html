@@ -1,0 +1,243 @@
+.header-homepage {
+	@include span-columns(12);
+	@include omega(); 
+	.newsletter-box {
+		@include span-columns(12);
+		@include omega(); 
+		background: $blue_1;
+		height: 200px;
+		position: absolute;
+		top:-200px;
+		left:0;
+		opacity: 0;
+		display: none;
+		@include media($notebook) {
+			@include span-columns(12);
+			@include omega(); 	
+		}
+		.content-news {
+			@include span-columns(12);
+			@include omega(); 
+			@include pad(40px 0);
+			position: absolute;
+			height: 100%;
+			top:0;
+			left:0;
+			z-index: 2;
+			.title-page {
+				@include span-columns(9);
+				margin:0;
+				color:$white;
+				font:{size:1.4em;}
+				text:{transform:uppercase;}
+				border-left:3px solid $white;
+				padding:{left:10px;}
+				@include media($notebook) {
+					@include span-columns(10);
+					margin:0;
+					@include shift(1);
+				}
+			}
+			.close-form {
+				@include span-columns(1);
+				margin:0;
+				color:$white;
+				text:{align:right;}
+				cursor:pointer;
+				@include media($tabletLand) {
+					@include span-columns(1.2);
+					margin:0;
+				}
+			}
+			.news-form {
+				@include span-columns(12);
+				@include pad(30px 0);
+				@include media($notebook) {
+					@include span-columns(10);
+					@include shift(1);
+				}
+				input {
+					@include span-columns(12);
+					@include pad(10px);
+					@include appearance(none);
+					outline: none;
+					border:2px solid $white;
+					background: $white;
+					color:$black;
+					font:{size:0.8em;}
+					@include media($notebook) {
+						@include span-columns(3);
+						@include omega(3n);
+						margin:{right:10px !important;}
+					}
+					&.btn-white {
+						background: none;
+						color:$white;
+						text:{transform:uppercase;}
+						font:{weight:bold;}
+						&:hover {
+							@include transition(all 0.3s ease-in-out);
+							background:$white;
+							color:$blue_1;
+							font:{weight:bold;}
+						}
+					}
+				}
+			}
+		}
+		.bg-newsletter {
+			position: absolute;
+			@include span-columns(12);
+			height: 100%;
+			top:0;
+			left:0;
+			background:url('../img/hipoteriodismo-noticias.jpg');
+			background-size: cover;
+			background-position: center;
+			opacity: 0.2;
+			z-index: 1;
+		}
+		&.show-news {
+			@include transition(all 0.3s ease-in-out);
+			top:0;
+			left:0;
+			opacity: 1;
+		}
+	}
+	.header-top {
+		border-bottom:1px solid $gray_2;
+		height: 40px;
+		display: none;
+		@include media($notebook) {
+			@include span-columns(12);
+			@include omega(); 
+		}
+		.newsletter-home {
+			@include span-columns(3);
+			background: $blue_1;
+			height: 40px;
+			display: table;
+			color:$white;
+			text:{align:center;}
+			cursor:pointer;
+			@include media($tabletLand) {
+				@include span-columns(4);
+				display: table;
+			}
+			.news-button {
+				@include span-columns(12);
+				@include omega(); 
+				float: none;
+				padding:0 10px;
+				display: table-cell;
+				vertical-align: middle;
+				font:{size:0.75em;}
+				text:{transform:uppercase;}
+				i {
+					font:{size:1.4em;}
+					margin:{left:5px;}
+				}
+			}
+			&.show-news {
+				@include transition(all 0.2s ease-in-out);
+				position: absolute;
+				top:200px;
+				left:0;
+				z-index: 9;
+			}
+		}
+	} 
+	.header-middle {
+		@include span-columns(12);
+		@include omega(); 
+		.logotipo-header {
+			@include span-columns(5);
+			margin:0 auto !important;
+			@include media($notebook) {
+				@include span-columns(2.5);
+				margin:0 auto !important;
+				float: none; 
+			}
+			a {
+				@include span-columns(12);
+				@include omega();
+				padding:{top:20px;bottom:10px;left:20px;}
+				@include media($notebook) {
+					padding:{top:40px;bottom:30px;}
+				}
+				img {
+					width: 100%;
+					height: auto;
+					display: block;
+				}
+			}
+		}
+		.menu-mobile {
+			@include span-columns(2);
+			float: right;
+			font:{size:1.5em;}
+			height: 48px;
+			display: table;
+			@include media($mobileLand) {
+				font:{size:1.7em;}
+				height: 70px;	
+			}
+			@include media($tablet) {
+				font:{size:2em;}
+				height: 70px;	
+			}
+			i {
+				display: table-cell;
+				vertical-align: middle;
+				text:{align:center;}
+				color:$blue_1;
+			}
+			@include media($notebook) {
+				display: none;
+			}
+		}
+	}
+	.header-bottom {
+		display: none;	
+		@include media($notebook) {
+			@include span-columns(12);
+			@include omega(); 
+		}
+		ul {
+			@include outer-container(90%);
+			@include pad(0);
+			margin:0 auto;
+			li {
+				list-style: none;
+				display: inline-block;
+				padding: 18px 10px;
+				font:{size:0.8em;weight:700;}
+				color:$gray_1;
+				&:hover {
+					@include transition(all 0.4s ease-in-out);
+					background: $blue_1;
+					color:$white;
+				}
+				&.search-menu {
+					@include span-columns(2);
+					float: right;
+					padding:0;
+					input {
+						@include appearance(none);
+						@include span-columns(12);
+						@include omega(); 	
+						border:1px solid $gray_2;
+						padding:13px 10px;
+						border-radius:25px;
+						font:{size:0.8em;}
+						outline:none;
+					}
+					&:hover {
+						background: none;
+						color:$gray_1;
+					}
+				}
+			}
+		}
+	}
+}

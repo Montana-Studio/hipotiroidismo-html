@@ -1,0 +1,161 @@
+.section-home {
+	@include span-columns(12);
+	margin:{bottom:60px;right:0;}
+}
+.post-single {
+	@include span-columns(12);
+	@include omega();
+	@include media($mobileLand) {
+		@include span-columns(6);
+	}
+	@include media($tablet) {
+		@include span-columns(6);
+	}
+	@include media($notebook) {
+		@include span-columns(6);
+	}
+	.image-bg {
+		@include span-columns(12);
+		@include omega();
+		height: 300px;
+		background:url('../img/hipoteriodismo-testimonio.jpg');
+		background-position: center;
+		background-size: cover;
+		border-bottom:6px solid $blue_1;
+		position: relative;
+		overflow: hidden;
+		@include media($mobileLand) {
+			height: 180px;
+		}
+		@include media($tablet) {
+			height: 230px;
+		}
+		@include media($tabletLand) {
+			height: 210px;
+		}
+		a {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+		}
+		.social-share-inside {
+			@include span-columns(12);
+			@include pad(0);
+			text:{align:center;}
+			margin:{top:50px;}
+			display: none;
+			li {
+				display: inline-block;
+				margin:0 5px;
+				list-style: none;
+				width: 50px;
+				a {
+					text:{decoration:none;align:center;}
+					background: $white;
+					border:1px solid $white;
+					color:$blue_1;
+					width: 50px;
+					height: 50px;
+					display: table;
+					border-radius: 50%;
+					i {
+						text:{align:center !important;}
+						display: table-cell;
+						vertical-align: middle;
+						padding:0 !important;
+						float:none !important;
+					}
+					&:hover {
+						@include transition(all 0.4s ease-in-out);
+						background: none;
+						color:$white;
+					}
+				}
+			}
+		}
+		.social-share {
+			width: 50px;
+			height: 50px;
+			background: $blue_1;
+			position: absolute;
+			bottom:0;
+			left:0;
+			z-index: 2;
+			color:$white;
+			display: table;
+			i {
+				font:{size:1.4em;}
+				display: table-cell;
+				vertical-align: middle;
+				text:{align:center;}
+			}
+			&:hover {
+				@include transition(all 0.4s ease-in-out);
+				@include span-columns(12);
+				height: 100%;
+				@include transform-origin(left bottom);
+				opacity: 0.7;
+				i {
+					text:{align:right;}
+					float: right;
+					padding:15px;
+				}
+				.social-share-inside {
+					display: block;
+				}
+			}
+		}
+	}
+	.title-post {
+		@include span-columns(12);
+		@include omega();
+		@include pad(10px 0);
+		.date-post {
+			@include span-columns(1.8);
+			@include omega();
+			text:{align:center;}
+			@include media($notebook) {
+				@include span-columns(1.7);
+				@include omega();	
+			}
+			.month {
+				@include span-columns(12);
+				@include omega();
+				@include pad(8px 0);
+				font:{size:0.9em;weight:700;}
+				background:$gray_2;
+				color:$gray_3;
+			}
+			.number {
+				@include span-columns(12);
+				@include omega();
+				@include pad(8px 0);
+				font:{size:0.9em;weight:700;}
+				color:$white;
+				background: $blue_2;
+			}
+		}
+		.title-post-single {
+			@include span-columns(10);
+			@include omega();
+			@include pad(0 10px);
+			display: inline-block;
+			font:{size:1.2em;weight:700;}
+			line-height: 1.5em;
+			@include media($mobileLand) {
+				font:{size:1.1em;}
+				line-height: 1.4em;
+			}
+			@include media($tabletLand) {
+				font:{size: 1.1em;}
+			    line-height: 1.4em;
+			}
+		}
+	}
+	.txt-post {
+		@include span-columns(12);
+		@include omega();
+		font:{size:13px;weight:400;}
+		line-height: 22px;
+	}
+}

@@ -1,0 +1,112 @@
+.footer-site {
+	@include span-columns(12);
+	@include omega();
+	background: $gray_bg;
+	.footer-info {
+		@include outer-container(90%);
+		padding:{top:15px;bottom:10px;}
+		@include media($notebook) {
+			@include pad(30px 0);
+			@include outer-container(85%);
+		}
+		ul {
+			@include span-columns(12);	
+			margin:0;
+			padding:0;
+			li {
+				@include span-columns(12);
+				@include omega();
+				@include media($mobileLand) {
+					@include span-columns(4);
+					@include omega(3n);
+					display: inline-block;
+				}
+				@include media($tablet) {
+					@include span-columns(4);
+					@include omega(3n);
+					display: inline-block;
+				}
+				@include media($notebook) {
+					@include span-columns(4);
+					@include omega(3n);
+					display: inline-block;
+				}
+				.title-section {
+					font:{size:0.9em;}
+					border:0;
+					padding:0;
+					margin:{bottom:5px;}
+				}
+				&.menu-footer {
+					ul {
+						@include span-columns(12);	
+						margin:{bottom:10px;right:0;}
+						padding:0;
+						@include media($notebook) {
+							margin:{bottom:0;}
+						}
+						li {
+							@include span-columns(12);
+							margin:{bottom:5px;right:0;}
+							font:{size:0.8em;weight:700;}
+							color:$gray_1;
+							text:{transform:uppercase;}
+							span {
+							font:{weight:normal;style:italic;}	
+							text:{transform:initial;}
+							}
+						}
+					}
+				}
+				&.social-links {
+						ul {
+						@include span-columns(12);	
+						margin:0;
+						padding:0;
+						li {
+							@include span-columns(2);
+							display: inline-block;
+							@include media($mobileLand) {
+								@include span-columns(3);
+								display: inline-block;
+							}
+							@include media($tablet) {
+								@include span-columns(3);
+								display: inline-block;
+							}
+							a {
+								width: 40px;
+								height: 40px;
+								background: $blue_1;
+								border:1px solid $blue_1;
+								color:$white;
+								border-radius: 50%;
+								text:{align:center;decoration:none;}
+								display: table;
+								i {
+									display: table-cell;
+									vertical-align: middle;
+								}
+								&:hover {
+									@include transition(all 0.4s ease-in-out);
+									background: none;
+									border:1px solid $blue_1;
+									color:$blue_1;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.footer-right {
+		@include span-columns(12);
+		@include omega();
+		@include pad(10px 0px);
+		border-top:1px solid $gray_2;
+		font:{size:10px;}
+		color:$gray_1;
+		text:{align:center;transform:uppercase;}
+	}
+}

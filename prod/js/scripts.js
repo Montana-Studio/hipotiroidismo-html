@@ -1,0 +1,10 @@
+$(document).ready(function(){
+	$('#newsletter-btn').click(function(){
+		$('.newsletter-box').toggleClass('show-news');
+		//$('#newsletter-btn').toggleClass('show-news');
+	});
+	$('.close-form').click(function(){
+		$('.newsletter-box').toggleClass('show-news');
+		//$('#newsletter-btn').toggleClass('show-news');
+	});
+});

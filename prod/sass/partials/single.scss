@@ -1,0 +1,203 @@
+.single {
+	@include span-columns(12);
+	@include omega();
+	.img-single {
+		@include span-columns(12);
+		@include omega();
+		height: 200px;
+		background:url('../img/hipoteriodismo-testimonio.jpg');
+		background-position: center;
+		background-size: cover;
+		border-bottom:6px solid $blue_1;
+		position: relative;
+		overflow: hidden;
+		@include media($tablet) {
+			height: 300px;
+		}
+		@include media($notebook) {
+			height: 400px;
+		}
+	}
+	.title-post {
+		@include span-columns(12);
+		@include pad(10px 0);
+		margin:{bottom:0px;right:0;}
+		@include media($notebook) {
+			margin:{bottom:10px;}
+		}
+		.date-post {
+			@include span-columns(1.5);
+			@include omega();
+			text:{align:center;}
+			@include media($tablet) {
+				@include span-columns(1);
+				@include omega();	
+			}
+			@include media($notebook) {
+				@include span-columns(1);
+				@include omega();	
+			}
+			.month {
+				@include span-columns(12);
+				@include omega();
+				@include pad(8px 0);
+				font:{size:0.7em;weight:700;}
+				background:$gray_2;
+				color:$gray_3;
+				@include media($mobileLand) {
+					font:{size:0.8em;}
+				}
+				@include media($notebook) {
+					font:{size:0.9em;}
+				}
+			}
+			.number {
+				@include span-columns(12);
+				@include omega();
+				@include pad(8px 0);
+				font:{size:0.7em;weight:700;}
+				color:$white;
+				background: $blue_2;
+				@include media($mobileLand) {
+					font:{size:0.8em;}
+				}
+				@include media($notebook) {
+					font:{size:0.9em;}
+				}
+			}
+		}
+		.title-post-single {
+			@include span-columns(10.5);
+			@include omega();
+			@include pad(0 10px);
+			display: inline-block;
+			font:{size:0.9em;weight:700;}
+			line-height: 1.5em;
+			@include media($mobileLand) {
+				font:{size:1.3em;}
+				line-height: 1.4em;
+			}
+			@include media($tablet) {
+				@include span-columns(11);
+				font:{size: 1.1em;}
+			    line-height: 1.4em;
+			}
+			@include media($notebook) {
+				@include span-columns(10);
+				@include omega();
+				@include pad(5px 10px);
+				font:{size: 1.4em;}
+    			line-height: 1.3em;
+			}
+		}
+		.info-post {
+			@include span-columns(10);
+			@include omega();
+			padding:{top:0px;left:10px;right:0px;}
+			font:{size:0.6em;}
+			text:{transform:uppercase;}
+			color:$gray_1;
+			@include media($tablet) {
+				@include span-columns(11);
+				@include omega();
+				font:{size:0.7em;}
+				padding:{top:10px;}
+			}
+			@include media($notebook) {
+				@include span-columns(11);
+				@include omega();
+				font:{size:0.7em;}
+				padding:{top:10px;}
+			}
+			.autor-articulo {
+				display: inline-block;
+			}
+			.tags-articulo {
+				display: initial;
+			}
+			a {
+				text:{decoration:none;}
+				color:$blue_1;
+			}
+		}
+	}
+	.content-articulo {
+		@include span-columns(12);
+		@include omega();
+		font:{size:14px;weight:400;}
+		line-height: 24px;
+		color:$gray_1;
+	}
+	.share-single {
+		@include span-columns(12);
+		@include omega();
+		border-top:1px solid $gray_2;
+		border-bottom:1px solid $gray_2;
+		ul {
+			@include span-columns(12);
+			@include omega();
+			@include pad(0px);
+			text:{align:center;}
+			height: 45px;
+			display: table;
+			@include media($notebook) {
+
+			}
+			li {
+				list-style: none;
+				display: inline-block;
+				margin:0 5px;
+				width: 45px;
+				a {
+					text:{decoration:none;align:center;}
+					background: $blue_1;
+					border:1px solid $blue_1;
+					color:$white;
+					width: 45px;
+					height: 45px;
+					display: table;
+					border-radius: 50%;
+					font:{size:1em;}
+					i {
+						text:{align:center !important;}
+						display: table-cell;
+						vertical-align: middle;
+						padding:0 !important;
+						float:none !important;
+					}
+					&:hover {
+						@include transition(all 0.4s ease-in-out);
+						border:1px solid $blue_1;
+						background: none;
+						color:$blue_1;
+					}
+				}
+				&.title-share {
+					font:{weight:800;size:0.7em;}
+					color:$gray_3;
+					text:{transform:uppercase;}
+					width: inherit;
+					display: inline-block;
+					margin:{bottom:5px;}
+					@include media($mobileLand) {
+						width: 200px;
+						vertical-align: top;
+    					margin:{top: 20px;}
+					}
+					@include media($notebook) {
+						width: 200px;
+						vertical-align: top;
+    					margin:{top: 20px;}
+					}
+				}
+			}
+		}
+	}
+	.fb-comments {
+		@include span-columns(12);
+		@include omega();
+		span {
+			width: 100% !important;
+		}
+	}
+}

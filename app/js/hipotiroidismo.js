@@ -1,0 +1,1 @@
+$(document).ready(function(){$("#newsletter-btn").click(function(){$(".newsletter-box").toggleClass("show-news")}),$(".close-form").click(function(){$(".newsletter-box").toggleClass("show-news")})});

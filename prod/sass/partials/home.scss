@@ -1,0 +1,314 @@
+.slider-home {
+	@include span-columns(12);
+	@include omega();
+	height: 600px;
+	overflow: hidden;
+	position: relative;
+	@include media($mobileLand) {
+		height: 500px;
+	}
+	.body-header {
+		@include span-columns(10);
+		@include shift(1);
+		background:$white;
+		overflow: hidden;
+		height: 150px;
+		position: absolute;
+		z-index: 10;
+		bottom:0;
+		@include media($mobileLand) {
+			height: 120px;
+		}
+		@include media($tablet) {
+			height: 160px;
+		}
+		@include media($notebook) {
+			height: 180px;
+		}
+		.swiper-container {
+			@include span-columns(12);
+			@include omega();
+			height: inherit;
+			.swiper-wrapper {
+				height: inherit;
+				.swiper-slide {
+					width: 33.3%;
+					margin:0;
+					background-position: center;
+					background-size: cover;
+					height: 150px;
+					@include media($mobileLand) {
+						height: 120px;
+						width: 33.3%;
+					}
+					@include media($tablet) {
+						height: 160px;
+					}
+					@include media($notebook) {
+						height: 180px;
+					}
+				}
+			}
+			&.gallery-thumbs {
+		        box-sizing: border-box;
+		        padding:0;
+		        .swiper-slide {
+			        height: 100%;
+			        opacity: 0.8;
+			        .bg-blue {
+			        	width: 100%;
+			        	height: 100%;
+			        	position: absolute;
+			        	top:0;
+			   			left:0;
+			   			z-index: 2;
+			   			opacity: 0.7;
+			   			background:#5e98df;
+			   			&.blue-one {
+							background:#5e98df;
+			   			}
+			   			&.blue-two {
+			   				background:#5e98df;
+			   			}
+			   			&.blue-three {
+			   				background:#5e98df;
+			   			}
+			        }
+			        .content-slider {
+			        	@include span-columns(12);
+			        	@include pad(20px);
+			        	height: 100%;
+			        	position: absolute;
+			        	top:0;
+			   			left:0;
+			   			z-index: 3;
+						width: 100%;
+			   			color:$white;
+						box-sizing: border-box;
+						@include media($mobileLand) {
+							@include pad(10px);
+						}
+						@include media($notebook) {
+							@include pad(30px);
+						}
+						.title-slider {
+							@include span-columns(12);
+							font:{size:1.3em;weight:bold;}
+							margin:{bottom:0px;}
+							@include media($mobileLand) {
+								font:{size:0.8em;}
+							}
+							@include media($tablet) {
+								font:{size:1em;}
+							}	
+							@include media($notebook) {
+								margin:{bottom:10px;}
+							}
+						}
+						.txt-slider {
+							font:{size:0.9em;}
+							line-height: 23px;
+							@include media($mobileLand) {
+								font:{size:0.7em;}
+								line-height: 18px;
+							}
+						}
+			        }
+			    }
+			    .swiper-slide-active {
+			        opacity: 1;
+			        .bg-blue {
+			        	opacity: 0.9;
+			        	
+			        	background:#7ac3dd;
+			        }	
+			    }
+		    }
+		}
+	}
+	.image-bg {
+		@include span-columns(12);
+		height: 100%;
+		position: absolute;
+		top:0;
+		left:0;
+		z-index: 1;
+		.swiper-container {
+	        width: 100%;
+	        margin-left: auto;
+	        margin-right: auto;
+	    }
+	    .swiper-slide {
+	        background-size: cover;
+	        background-position: inherit;
+	        text-align: center;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: -webkit-flex;
+			display: flex;
+			-webkit-box-pack: center;
+			-ms-flex-pack: center;
+			-webkit-justify-content: center;
+			justify-content: center;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			-webkit-align-items: center;
+			position: relative;
+			@include media($notebook) {
+				background-position: center;
+			}
+			.slider-texto {
+				@include span-columns(10);
+				margin:0 auto;
+				position:absolute;
+				left: 13px;
+    			top: 80px;
+    			@include media($mobileLand) {
+    				@include span-columns(6);
+					@include shift(1);
+					left:0;
+					top: 25px;
+    			}
+    			@include media($tablet) {
+    				@include span-columns(6);
+					@include shift(1);
+					left: 65px;
+    				top: 46px;
+    			}
+    			@include media($notebook) {
+    				@include span-columns(10);
+					@include shift(1);
+					left:0;
+    			}
+				.proximamente-txt {
+					@include span-columns(12);
+					@include pad(70px 20px);
+					@include media($tabletLand) {
+						@include span-columns(6);
+					}
+					@include media($notebook) {
+						@include span-columns(5);
+					}
+					top:0;
+					z-index: 1;	
+					position: relative;
+					.content-info {
+						@include span-columns(12);
+						position: inherit;
+						z-index: 4;
+						text:{align:left;}
+						.prox-title {
+							font:{size:1.5em;weight:bold;}
+							color:$gray_3;
+							line-height: 1em;
+							margin:5px 0;
+							@include media($tablet) {
+								font:{size:2.4em;}
+							}
+							@include media($tabletLand) {
+								font:{size:2.4em;}
+							}
+							@include media($notebook) {
+								font:{size:2.4em;weight:bold;}
+								margin:0;
+							}
+							@include media($desktop) {
+								font:{size:3em;weight:bold;}
+								margin:{top:0;bottom:5px;}
+							}
+						}
+						.prox-bajada {
+							font:{size:0.9em;weight:bold;}
+							color:$gray_3;
+							text:{transform:uppercase;}
+							margin:{bottom:0;}
+							@include media($tablet) {
+								font:{size:1.5em;}
+							}
+							@include media($tabletLand) {
+								font:{size:1.1em;}
+							}
+							@include media($notebook) {
+								font:{size:1.2em;weight:bold;}
+							}
+							span {
+								color:$blue_2;
+							}
+						}
+						.line-prox {
+							width: 80px;
+							height: 2px;
+							background:$blue_2;
+							margin:{top:6px;bottom:15px;}
+							@include media($tablet) {
+								margin:{top:5px;bottom:15px;}
+							}
+							@include media($tabletLand) {
+								margin:{top:10px;bottom:20px;}
+							}
+						}
+						.bajada-prox {
+							font:{size:0.9em;}
+							line-height: 1.7em;
+							color:$gray_1;
+							@include media($tablet) {
+								font:{size:1.1em;}
+								line-height: 1.6em;
+							}
+							@include media($tabletLand) {
+								font:{size:0.9em;}
+								line-height: 1.6em;
+							}
+							@include media($notebook) {
+								font:{size:0.9em;}
+								line-height: 1.9em;
+							}
+						}
+					}
+					.bg-color {
+						position: absolute;
+						width: 100%;
+						height: 100%;
+						z-index: 2;	
+						background: $white;
+						opacity: 0.8;
+						top:0;
+						left:0;
+					}
+				}
+			}
+	    }
+	    .gallery-top {
+	        height: 100%;
+	        width: 100%;
+	    }
+	}
+}
+.body-homepage {
+	@include span-columns(12);
+	@include omega();
+	@include pad(10px 0);
+	@include media($mobileLand) {
+		@include pad(0px 0);
+	}
+	@include media($tablet) {
+		@include pad(30px 0px);
+	}
+	@include media($notebook) {
+		@include pad(30px 0);
+	}
+	.content-home {
+		@include span-columns(12);
+		@include omega();
+		@include media($notebook) {
+			@include span-columns(9);
+			@include omega();
+			padding:{right: 25px;}
+			display: inline-block;
+		}
+		@include media($tabletLand) {
+			@include span-columns(8);
+			@include omega();
+		}
+	}
+}

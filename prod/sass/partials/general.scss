@@ -1,0 +1,45 @@
+body {
+	@include span-columns(12);
+	margin:0;
+	font:{family:$font_first;}
+}   
+.windows-center {
+	@include outer-container(90%);
+	width: 100%;
+	@include media($notebook) {
+		@include outer-container(83%);	 
+	}
+	@include media($tabletLand) {
+		@include outer-container(95%);	 
+	}
+}
+.body-homepage {
+	@include span-columns(12);
+	@include omega();
+}
+.title-section {
+	@include span-columns(12);
+	@include omega();
+	color:$gray_3;
+	font:{size:1.2em;weight:700;}
+	text:{transform:uppercase;}
+	border-left:3px solid $blue_1;
+	padding:{left:10px;}
+	margin:{bottom:20px;}
+	@include media($mobileLand) {
+		font:{size:1.1em;}
+	}
+}
+.seguir-leyendo {
+	@include span-columns(12);
+	@include omega();
+	display: inline-block;
+	color:$blue_1;
+	font:{weight:bold;size:0.7em;}
+	text:{transform:uppercase;decoration:none;align:right;}
+	padding:{right:5px;}
+	&:hover {
+		@include transition(all 0.5s ease-in-out);
+		color:$blue_2;
+	}
+}
